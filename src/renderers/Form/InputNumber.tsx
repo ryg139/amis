@@ -75,7 +75,7 @@ export interface NumberControlSchema extends FormBaseControl {
   /**
    * 输入框为基础输入框还是加强输入框
    */
-  mode?: 'base' | 'strong';
+  displayMode?: 'base' | 'enhance';
 }
 
 export interface NumberProps extends FormControlProps {
@@ -115,7 +115,7 @@ export interface NumberProps extends FormControlProps {
   /**
    * 输入框为基础输入框还是加强输入框
    */
-  mode?: 'base' | 'strong';
+  displayMode?: 'base' | 'enhance';
 }
 
 interface NumberState {
@@ -261,7 +261,7 @@ export default class NumberControl extends React.Component<
       readOnly,
       autoFocus,
       keyboard,
-      mode
+      displayMode
     } = this.props;
 
     let precisionProps: any = {};
@@ -323,7 +323,7 @@ export default class NumberControl extends React.Component<
           onBlur={this.dispatchEvent}
           autoFocus={autoFocus}
           keyboard={keyboard}
-          mode={mode}
+          displayMode={displayMode}
         />
         {unitOptions ? (
           <Select
