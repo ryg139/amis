@@ -205,7 +205,7 @@
   }
 }
 .#{$ns}Number--enhance {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   border: var(--Number-borderWidth) solid var(--Number-borderColor);
   border-radius: var(--Number-borderRadius);
